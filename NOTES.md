@@ -9,8 +9,6 @@ This repository is a beginner-friendly NumPy practice collection with small scri
 - reshaping
 - mathematical operations
 
----
-
 ## File-by-File Notes
 
 ### `README.md`
@@ -38,7 +36,7 @@ This repository is a beginner-friendly NumPy practice collection with small scri
 ### `creation/sequences.py`
 - Uses `np.arange(1,10,2)` to generate a number sequence.
 
-### `SpecialAraay/numArray.py`
+### `SpecialArray/numArray.py`
 - Demonstrates special array constructors:
   - `np.zeros`, `np.ones`, `np.full`, `np.eye`
   - sequence generators: `np.arange`, `np.linspace`, `np.logspace`, `np.geomspace`
@@ -68,10 +66,6 @@ This repository is a beginner-friendly NumPy practice collection with small scri
   - single element access `arr2[0,1]`
   - full column selection `arr2[:,1]`
 
-### `indexing/tempCodeRunnerFile.py`
-- Temporary editor-generated file (not part of learning content).
-- Safe to remove.
-
 ### `Broadcasting/broadcasting.py`
 - Demonstrates broadcasting between:
   - `a` shape `(2,3)`
@@ -85,36 +79,24 @@ This repository is a beginner-friendly NumPy practice collection with small scri
   - transpose with `.T`
 
 ### `Reshaping/copyVsView.py`
-- Intended to demonstrate copy/view behavior.
-- Current code assigns `b=a` then overwrites with `b=a.copy()`, so it only ends up showing copy assignment.
+- Now clearly demonstrates `view()` vs `copy()` behavior by changing original array and printing all three arrays.
 
-### `Mathematical fuct/maths.py`
+### `MathematicalFunctions/maths.py`
 - Demonstrates math functions:
   - `sqrt`, `exp`, `log`, `log10`
   - `sin`, `cos`, `tan`, `arctan`
-- Includes `arcsin(a)` and `arccos(a)` where `a=[1..10]`, which is outside valid domain for most values and will output `nan` with runtime warnings.
+  - inverse trig with valid-domain input using `angles = [-1, -0.5, 0, 0.5, 1]`
 
----
-
-## Issues / Cleanup Suggestions
-1. Rename typo folders for clarity:
+## Cleanup Applied
+1. Renamed folders:
 - `SpecialAraay` -> `SpecialArray`
-- `Mathematical fuct` -> `Mathematical funct` or `MathematicalFunctions`
+- `Mathematical fuct` -> `MathematicalFunctions`
 
-2. Remove temporary file:
+2. Removed temporary file:
 - `indexing/tempCodeRunnerFile.py`
 
-3. Fix inverse trig domain in `Mathematical fuct/maths.py`:
-- `np.arcsin` and `np.arccos` should be used on values in `[-1, 1]`.
+3. Fixed inverse trig domain issue:
+- `MathematicalFunctions/maths.py`
 
-4. Improve `Reshaping/copyVsView.py`:
-- Add both `view` and `copy` examples in the same script for clear comparison.
-
----
-
-## Suggested Next Step
-If you want, I can do an immediate cleanup pass now:
-- remove temp file
-- fix copy-vs-view demo
-- fix inverse trig example
-- standardize folder names and update paths
+4. Improved copy-vs-view demo:
+- `Reshaping/copyVsView.py`
